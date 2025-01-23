@@ -15,6 +15,7 @@
         }
 
         body {
+            
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
@@ -144,27 +145,17 @@
 
     <!-- Body Section -->
     <section class="cards-container">
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Card Image">
-            <div class="content">
-                <h3>Card Title 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mauris nec magna consectetur.</p>
+        <% blogs.forEach((blog)=>{ %> 
+            <!-- %- xaina kina bhane yo ui ma haldinam JS ho so tei bhayera -->
+            <div class="card">
+                <div class="content">
+                    <h3><%- blog.title %></h3>
+                    <h4> <%- blog.subTitle %></h4>
+                    <h6> <%- blog.description %> </h6>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Card Image">
-            <div class="content">
-                <h3>Card Title 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mauris nec magna consectetur.</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Card Image">
-            <div class="content">
-                <h3>Card Title 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mauris nec magna consectetur.</p>
-            </div>
-        </div>
+       <% }) %>
+        
     </section>
 
     <!-- Footer -->
